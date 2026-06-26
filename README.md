@@ -1,2 +1,2 @@
-# Bigram
-A small open-source bigram model for testing my knowledge
+# Wester
+A NLP with a extremly big corpus
