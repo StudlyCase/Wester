@@ -1,4 +1,5 @@
 import os
+from cleaner import clean
 
 def load_docs(folder="docs"):
     docs = {}
@@ -10,7 +11,7 @@ def load_docs(folder="docs"):
         if fname.endswith(".txt"):
             path = os.path.join(folder, fname)
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
-                docs[fname] = f.read()
+                docs[fname] = clean(f.read())
     if not docs:
         print(f"[loader] no .txt files found in '{folder}/'.")
     return docs
